@@ -1,0 +1,27 @@
+{
+  "name": "gen-ai-assist-crm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "prettier": "npx prettier . --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajansaini8877/gen-ai-assist-crm.git"
+  },
+  "author": "Rajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajansaini8877/gen-ai-assist-crm/issues"
+  },
+  "homepage": "https://github.com/rajansaini8877/gen-ai-assist-crm#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "prettier": "^3.5.3"
+  }
+}
