@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs");
 const path = require("path");
 const app = express();
 // const { fetchSimilarAct, fetchSimilarAppeal } = require('./src/services/fetch-similar');
@@ -114,8 +115,19 @@ app.get("/health", (req, res) => {
 //     res.render('form')
 // })
 
+app.post("/dashboard", async (req, res) => {
+  //   await connectRedis();
+
+  const casesPath = path.join(__dirname, "src", "model", "cases.json");
+  const cases = JSON.parse(fs.readFileSync(casesPath));
+  console.log(cases);
+  res.render("dashboard", {
+    cases: cases,
+  });
+});
+
 app.get("/home", async (req, res) => {
-//   await connectRedis();
+  //   await connectRedis();
   res.render("home");
 });
 
