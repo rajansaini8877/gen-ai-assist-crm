@@ -120,9 +120,17 @@ app.post("/dashboard", async (req, res) => {
 
   const casesPath = path.join(__dirname, "src", "model", "cases.json");
   const cases = JSON.parse(fs.readFileSync(casesPath));
-  console.log(cases);
+
+  const eventsPath = path.join(__dirname, "src", "model", "events.json");
+  const events = JSON.parse(fs.readFileSync(eventsPath));
+
+  const workItemsPath = path.join(__dirname, "src", "model", "work-items.json");
+  const workItems = JSON.parse(fs.readFileSync(workItemsPath));
+
   res.render("dashboard", {
-    cases: cases,
+    cases,
+    events,
+    workItems,
   });
 });
 

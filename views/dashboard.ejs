@@ -68,8 +68,7 @@
         <div class="ui one column padded very relaxed grid">
             <div class="column">
                 <h2 class="ui header">Cases</h2>
-                <br>
-                <table class="ui single line table">
+                <table class="ui selectable fixed single line celled table">
   <thead>
     <tr>
       <th>Case Number</th>
@@ -88,6 +87,21 @@
     </tr>
     <% } %>
   </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="4">
+        <div class="ui right floated small primary labeled icon button">
+          <i class="user icon"></i> Add Case
+        </div>
+        <div class="ui small button">
+          Show All
+        </div>
+        <div class="ui small  disabled button">
+          Approve
+        </div>
+      </th>
+    </tr>
+  </tfoot>
 </table>
             </div>
             <!-- <div class="column">
@@ -101,6 +115,123 @@
         </div> -->
     </div>
     
+    <br>
+    <div class="ui raised segment">
+        <div class="ui one column padded very relaxed grid">
+            <div class="column">
+                <h2 class="ui header">Events</h2>
+                <table class="ui selectable fixed single line celled table">
+  <thead>
+    <tr>
+      <th>Event Number</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Case Number</th>
+      <th>Work Item Number</th>
+      <th>Status</th>
+      <th>Contact Name</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(const item of events) { %>
+    <tr>
+      <td><%= item.eventNumber %></td>
+      <td><%= item.type %></td>
+      <td><%= item.description %></td>
+      <td><%= item.caseNumber %></td>
+      <td><%= item.workItemNumber %></td>
+      <td><%= item.status %></td>
+      <td><%= item.contactName %></td>
+      <td><%= new Date(item.created) %></td>
+    </tr>
+    <% } %>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="8">
+        <div class="ui right floated small primary labeled icon button">
+          <i class="user icon"></i> Create Work Item
+        </div>
+        <div class="ui small button">
+          Show All
+        </div>
+        <div class="ui small  disabled button">
+          Approve
+        </div>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+            </div>
+            <!-- <div class="column">
+                <h1 class="ui header">Search placeholder</h1>
+                <br>
+            </div> -->
+
+        </div>
+        <!-- <div class="ui vertical divider">
+            and
+        </div> -->
+    </div>
+
+    <br>
+    <div class="ui raised segment">
+        <div class="ui one column padded very relaxed grid">
+            <div class="column">
+                <h2 class="ui header">Work Items</h2>
+                <table class="ui selectable fixed single line celled table">
+  <thead>
+    <tr>
+      <th>Work Item Number</th>
+      <th>Status</th>
+      <th>Process</th>
+      <th>Area</th>
+      <th>Sub Area</th>
+      <th>Case Number</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(const item of workItems) { %>
+    <tr>
+      <td><%= item.workItemNumber %></td>
+      <td><%= item.status %></td>
+      <td><%= item.process %></td>
+      <td><%= item.area %></td>
+      <td><%= item.subArea %></td>
+      <td><%= item.caseNumber %></td>
+      <td><%= new Date(item.created) %></td>
+    </tr>
+    <% } %>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th colspan="7">
+        <div class="ui right floated small primary labeled icon button">
+          <i class="user icon"></i> Create Event
+        </div>
+        <div class="ui small button">
+          Show All
+        </div>
+        <div class="ui small  disabled button">
+          Approve
+        </div>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+            </div>
+            <!-- <div class="column">
+                <h1 class="ui header">Search placeholder</h1>
+                <br>
+            </div> -->
+
+        </div>
+        <!-- <div class="ui vertical divider">
+            and
+        </div> -->
+    </div>
     </div>
 
     
