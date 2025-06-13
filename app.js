@@ -115,6 +115,35 @@ app.get("/health", (req, res) => {
 //     res.render('form')
 // })
 
+app.post("/work-items/:workItemNumber", (req, res) => {
+  // const data = req.body;
+  const workItemNumber = req.params.workItemNumber;
+
+  const workItemsPath = path.join(__dirname, "src", "model", "work-items.json");
+  const workItems = JSON.parse(fs.readFileSync(workItemsPath));
+
+  for (let item of workItems) {
+    if (item.workItemNumber === workItemNumber) {
+      res.render("work-item-home", {
+        workItemData: item,
+      });
+      break;
+    }
+  }
+});
+
+app.post("/cases/:caseNumber", (req, res) => {
+  // const data = req.body;
+  // console.log(data.workItemNumber);
+  res.render("case-home");
+});
+
+app.post("/events/:eventNumber", (req, res) => {
+  // const data = req.body;
+  // console.log(data.workItemNumber);
+  res.render("event-home");
+});
+
 app.post("/dashboard", async (req, res) => {
   //   await connectRedis();
 
