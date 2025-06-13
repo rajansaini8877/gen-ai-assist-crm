@@ -108,7 +108,7 @@
 
     <div class="ui divider"></div>
 
-    <div class="ui three column grid">
+    <div class="ui equal width grid">
       <div class="column">
         <div class="ui raised blue fluid card">
           <div class="content">
@@ -185,11 +185,40 @@
             </div>
           </div>
           <div class="extra content">
-            <button class="ui primary button">Close Work Item</button>
+            <div class="ui right floated small primary labeled icon button">
+              <i class="check circle icon"></i> Mark Completed
+            </div>
           </div>
         </div>
       </div>
-      <div class="column"></div>
+      <div class="column">
+        <div class="ui placeholder padded segment">
+          <div class="ui two column stackable center aligned grid">
+            <div class="ui vertical divider">Or</div>
+            <div class="middle aligned row">
+              <div class="column">
+                <div class="ui divided very relaxed huge list">
+                  <a class="item">More Info</a>
+                  <a class="item">Navigate to Case</a>
+                  <a class="item">Navigate to Events</a>
+                  <a class="item">Assign to Supervisor</a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui icon header">
+                  <i class="magic icon"></i>
+                  Need help?
+                </div>
+                <a href="#target-content" id="button">
+                  <div class="ui primary button">
+                    Chat with Intelligent Assist
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -223,12 +252,9 @@
     </div>
   </div>
 
-  <a href="#target-content" id="button">Open CSS Modal via <code>:target</code></a>
-
   <div id="target-content">
     <a href="#" class="close"></a>
     <div id="target-inner">
-      <h2>CSS Modal</h2>
       <iframe id="tock" src="https://ec2-3-10-73-135.eu-west-2.compute.amazonaws.com/">
         This modal is open because its id is the target in the <code>href</code> of the link. You can style an element's
         target state with the selector <code>:target</code>. When this modal is toggled, an invisible link with
