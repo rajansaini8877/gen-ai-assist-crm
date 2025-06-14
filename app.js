@@ -144,7 +144,7 @@ app.post("/events/:eventNumber", (req, res) => {
   res.render("event-home");
 });
 
-app.post("/dashboard", async (req, res) => {
+app.get("/dashboard", async (req, res) => {
   //   await connectRedis();
 
   const casesPath = path.join(__dirname, "src", "model", "cases.json");

@@ -58,6 +58,13 @@
   </div>
 
   <div class="ui main container">
+    <div class="ui large breadcrumb">
+      <a class="section" href="/home">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section" href="/dashboard">Dashboard</a>
+      <i class="right arrow icon divider"></i>
+      <div class="active section">Work Items</div>
+    </div>
     <h2 class="ui header">
       <i class="edit icon"></i>
       <div class="content">
@@ -68,7 +75,6 @@
       </div>
     </h2>
     <br>
-
 
     <div class="ui steps">
       <div class="step">
@@ -108,14 +114,26 @@
 
     <div class="ui divider"></div>
 
+    <div class="ui yellow small progress" id="sla-progress">
+      <div class="bar"></div>
+      <div class="label">Time to SLA (days)</div>
+    </div>
+
+    <div class="ui divider"></div>
+
     <div class="ui equal width grid">
       <div class="column">
         <div class="ui raised blue fluid card">
           <div class="content">
-            <div class="header">Work Item Details</div>
+            <div class="ui large header">
+              <div class="ui right floated small primary labeled icon button">
+                <i class="check circle icon"></i> Mark Completed
+              </div>
+              Work Item Details
+            </div>
+
           </div>
           <div class="content">
-            <h4 class="ui sub header">Activity</h4>
             <div class="ui small feed">
               <div class="ui relaxed divided large list">
                 <div class="item">
@@ -185,9 +203,7 @@
             </div>
           </div>
           <div class="extra content">
-            <div class="ui right floated small primary labeled icon button">
-              <i class="check circle icon"></i> Mark Completed
-            </div>
+
           </div>
         </div>
       </div>
@@ -252,6 +268,12 @@
     </div>
   </div>
 
+  <script>
+    $('#sla-progress').progress({
+      percent: 60
+    });
+  </script>
+
   <div id="target-content">
     <a href="#" class="close"></a>
     <div id="target-inner">
@@ -262,6 +284,9 @@
         thus close the modal.
     </div>
   </div>
+
+
+
 </body>
 
 </html>
