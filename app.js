@@ -133,15 +133,35 @@ app.post("/work-items/:workItemNumber", (req, res) => {
 });
 
 app.post("/cases/:caseNumber", (req, res) => {
-  // const data = req.body;
-  // console.log(data.workItemNumber);
-  res.render("case-home");
+  const caseNumber = req.params.caseNumber;
+
+  const casesPath = path.join(__dirname, "src", "model", "cases.json");
+  const cases = JSON.parse(fs.readFileSync(casesPath));
+
+  for (let item of cases) {
+    if (item.caseNumber === caseNumber) {
+      res.render("case-home", {
+        caseData: item,
+      });
+      break;
+    }
+  }
 });
 
 app.post("/events/:eventNumber", (req, res) => {
-  // const data = req.body;
-  // console.log(data.workItemNumber);
-  res.render("event-home");
+  const eventNumber = req.params.eventNumber;
+
+  const eventsPath = path.join(__dirname, "src", "model", "events.json");
+  const events = JSON.parse(fs.readFileSync(eventsPath));
+
+  for (let item of events) {
+    if (item.eventNumber === eventNumber) {
+      res.render("event-home", {
+        eventData: item,
+      });
+      break;
+    }
+  }
 });
 
 app.get("/dashboard", async (req, res) => {

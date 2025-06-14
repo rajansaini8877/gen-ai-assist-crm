@@ -11,7 +11,8 @@
   <title>Fixed Menu Example - Semantic</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <script src="semantic/dist/semantic.min.js"></script>
+  <script src="/semantic/dist/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/styles/popup.css">
 
 
   <style type="text/css">
@@ -57,40 +58,144 @@
   </div>
 
   <div class="ui main container">
-    <h2 class="ui header">
-      <i class="align left icon"></i>
-      <div class="content">
-        Work Item
-        <div class="sub header">Based on recent interactions</div>
-      </div>
-    </h2>
-    <br>
+    <div class="ui large breadcrumb">
+      <a class="section" href="/home">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section" href="/dashboard">Dashboard</a>
+      <i class="right arrow icon divider"></i>
+      <div class="active section">Cases</div>
+    </div>
 
-
-    <div class="ui steps">
-      <div class="step">
-        <i class="truck icon"></i>
-        <div class="content">
-          <div class="title">Shipping</div>
-          <div class="description">Choose your shipping options</div>
-        </div>
-      </div>
-      <div class="active step">
-        <i class="payment icon"></i>
-        <div class="content">
-          <div class="title">Billing</div>
-          <div class="description">Enter billing information</div>
-        </div>
-      </div>
-      <div class="disabled step">
-        <i class="info icon"></i>
-        <div class="content">
-          <div class="title">Confirm Order</div>
+    <div class="ui stackable menu">
+      <a class="item">
+        Cases
+      </a>
+      <a class="item">
+        Work Items
+      </a>
+      <a class="item">
+        Events
+      </a>
+      <a class="item">
+        Contacts
+      </a>
+      <a class="item">
+        Correspondence
+      </a>
+      <a class="item">
+        Third Party
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search..." fdprocessedid="b2xcpl">
+            <i class="search link icon"></i>
+          </div>
         </div>
       </div>
     </div>
 
+    <h2 class="ui header">
+      <i class="edit icon"></i>
+      <div class="content">
+        Case
+        <div class="sub header">
+          <%= caseData.caseNumber %>
+        </div>
+      </div>
+    </h2>
+    <br>
 
+    <div class="ui divider"></div>
+
+    <div class="ui equal width grid">
+      <div class="column">
+        <div class="ui raised blue fluid card">
+          <div class="content">
+            <div class="ui large header">
+              <div class="ui right floated small primary labeled icon button">
+                <i class="check circle icon"></i> Close Case
+              </div>
+              Case Details
+            </div>
+
+          </div>
+          <div class="content">
+            <div class="ui small feed">
+              <div class="ui relaxed divided large list">
+                <div class="item">
+                  <i class="large circle outline middle aligned icon"></i>
+                  <div class="content">
+                    <p class="header">Case Number</p>
+                    <div class="description">
+                      <%= caseData.caseNumber %>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="large circle outline middle aligned icon"></i>
+                  <div class="content">
+                    <p class="header">Status</p>
+                    <div class="description">
+                      <%= caseData.status %>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="large circle outline middle aligned icon"></i>
+                  <div class="content">
+                    <p class="header">Stage</p>
+                    <div class="description">
+                      <%= caseData.stage %>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="large circle outline middle aligned icon"></i>
+                  <div class="content">
+                    <p class="header">Opened</p>
+                    <div class="description">
+                      <%= new Date(caseData.opened).toUTCString() %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="extra content">
+
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui placeholder padded segment">
+          <div class="ui two column stackable center aligned grid">
+            <div class="ui vertical divider">Or</div>
+            <div class="middle aligned row">
+              <div class="column">
+                <div class="ui divided very relaxed huge list">
+                  <a class="item">More Info</a>
+                  <a class="item">Manage Contacts</a>
+                  <a class="item">Manage Work Items</a>
+                  <a class="item">Move to Enforcement</a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui icon header">
+                  <i class="magic icon"></i>
+                  Need help?
+                </div>
+                <a href="#target-content" id="button">
+                  <div class="ui primary button">
+                    Chat with Intelligent Assist
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -122,6 +227,26 @@
       </div>
     </div>
   </div>
+
+  <script>
+    $('#sla-progress').progress({
+      percent: 60
+    });
+  </script>
+
+  <div id="target-content">
+    <a href="#" class="close"></a>
+    <div id="target-inner">
+      <iframe id="tock" src="https://ec2-3-10-73-135.eu-west-2.compute.amazonaws.com/">
+        This modal is open because its id is the target in the <code>href</code> of the link. You can style an element's
+        target state with the selector <code>:target</code>. When this modal is toggled, an invisible link with
+        <code>href="#"</code> is positioned absolutely behind the modal content. Clicking it will change the target and
+        thus close the modal.
+    </div>
+  </div>
+
+
+
 </body>
 
 </html>

@@ -62,14 +62,6 @@
       <i class="right arrow icon divider"></i>
       <div class="active section">Dashboard</div>
     </div>
-    <h2 class="ui header">
-      <i class="align left icon"></i>
-      <div class="content">
-        Dashboard
-        <div class="sub header">Based on recent interactions</div>
-      </div>
-    </h2>
-
 
     <div class="ui stackable menu">
       <a class="item">
@@ -99,6 +91,17 @@
         </div>
       </div>
     </div>
+    
+    <h2 class="ui header">
+      <i class="align left icon"></i>
+      <div class="content">
+        Dashboard
+        <div class="sub header">Based on recent interactions</div>
+      </div>
+    </h2>
+
+
+    
     <br>
 
 
@@ -168,6 +171,84 @@
     </div>
 
     <br>
+
+    <div class="ui raised blue segment">
+      <div class="ui one column padded very relaxed grid">
+        <div class="column">
+          <h2 class="ui blue header">My Work Items</h2>
+          <table id="work-item-table" class="ui selectable fixed single line celled table">
+            <thead>
+              <tr>
+                <th>Work Item Number</th>
+                <th>Status</th>
+                <th>Process</th>
+                <th>Area</th>
+                <th>Sub Area</th>
+                <th>Case Number</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(const item of workItems) { %>
+                <form id="work-item-form-<%= item.workItemNumber %>" action="/work-items/<%= item.workItemNumber %>"
+                  method="post">
+                  <input type="hidden" name="workItemNumber" value="<%= item.workItemNumber %>">
+                </form>
+                <tr class="work-item-row">
+                  <td>
+                    <%= item.workItemNumber %>
+                  </td>
+                  <td>
+                    <%= item.status %>
+                  </td>
+                  <td>
+                    <%= item.process %>
+                  </td>
+                  <td>
+                    <%= item.area %>
+                  </td>
+                  <td>
+                    <%= item.subArea %>
+                  </td>
+                  <td>
+                    <%= item.caseNumber %>
+                  </td>
+                  <td>
+                    <%= new Date(item.created) %>
+                  </td>
+                </tr>
+                <% } %>
+            </tbody>
+            <tfoot class="full-width">
+              <tr>
+                <th colspan="7">
+                  <div class="ui right floated small primary labeled icon button">
+                    <i class="user icon"></i> Create Work Item
+                  </div>
+                  <div class="ui small button">
+                    Show All
+                  </div>
+                  <div class="ui small  disabled button">
+                    Approve
+                  </div>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <!-- <div class="column">
+                <h1 class="ui header">Search placeholder</h1>
+                <br>
+            </div> -->
+
+      </div>
+      <!-- <div class="ui vertical divider">
+            and
+        </div> -->
+    </div>
+
+    <br>
+
     <div class="ui raised blue segment">
       <div class="ui one column padded very relaxed grid">
         <div class="column">
@@ -223,82 +304,6 @@
                 <th colspan="8">
                   <div class="ui right floated small primary labeled icon button">
                     <i class="user icon"></i> Create Event
-                  </div>
-                  <div class="ui small button">
-                    Show All
-                  </div>
-                  <div class="ui small  disabled button">
-                    Approve
-                  </div>
-                </th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <!-- <div class="column">
-                <h1 class="ui header">Search placeholder</h1>
-                <br>
-            </div> -->
-
-      </div>
-      <!-- <div class="ui vertical divider">
-            and
-        </div> -->
-    </div>
-
-    <br>
-    <div class="ui raised blue segment">
-      <div class="ui one column padded very relaxed grid">
-        <div class="column">
-          <h2 class="ui blue header">My Work Items</h2>
-          <table id="work-item-table" class="ui selectable fixed single line celled table">
-            <thead>
-              <tr>
-                <th>Work Item Number</th>
-                <th>Status</th>
-                <th>Process</th>
-                <th>Area</th>
-                <th>Sub Area</th>
-                <th>Case Number</th>
-                <th>Created</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for(const item of workItems) { %>
-                <form id="work-item-form-<%= item.workItemNumber %>" action="/work-items/<%= item.workItemNumber %>"
-                  method="post">
-                  <input type="hidden" name="workItemNumber" value="<%= item.workItemNumber %>">
-                </form>
-                <tr class="work-item-row">
-                  <td>
-                    <%= item.workItemNumber %>
-                  </td>
-                  <td>
-                    <%= item.status %>
-                  </td>
-                  <td>
-                    <%= item.process %>
-                  </td>
-                  <td>
-                    <%= item.area %>
-                  </td>
-                  <td>
-                    <%= item.subArea %>
-                  </td>
-                  <td>
-                    <%= item.caseNumber %>
-                  </td>
-                  <td>
-                    <%= new Date(item.created) %>
-                  </td>
-                </tr>
-                <% } %>
-            </tbody>
-            <tfoot class="full-width">
-              <tr>
-                <th colspan="7">
-                  <div class="ui right floated small primary labeled icon button">
-                    <i class="user icon"></i> Create Work Item
                   </div>
                   <div class="ui small button">
                     Show All
