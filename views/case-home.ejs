@@ -106,7 +106,44 @@
     </h2>
     <br>
 
-    <div class="ui divider"></div>
+
+    <div class="ui yellow segment">
+
+      <div class="ui warning message">
+        <div class="header">
+          <i class="exclamation triangle icon"></i>
+          Action required
+        </div>
+        <ul class="list">
+          <li>Case non-compliance score increased to 89%</li>
+          <li>This prediction will expire on 15th July 2025</li>
+        </ul>
+      </div>
+
+      <div class="ui fluid accordion">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <b>Information on non-compliance</b>
+        </div>
+        <div class="content">
+          <p class="transition hidden"><i class="small arrow right icon"></i> Amount due partially paid in current
+            quarter</p>
+          <p class="transition hidden"><i class="small arrow right icon"></i>5 service requests raised in past 3 months
+          </p>
+          <p class="transition hidden"><i class="small arrow right icon"></i>Amount paid in full in previous quarter</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <b>Potential actions</b>
+        </div>
+        <div class="content">
+          <p class="transition hidden"><i class="small arrow right icon"></i>Change to address details</p>
+          <p class="transition hidden"><i class="small arrow right icon"></i>Change to payment details</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
 
     <div class="ui equal width grid">
       <div class="column">
@@ -229,15 +266,16 @@
   </div>
 
   <script>
-    $('#sla-progress').progress({
-      percent: 60
-    });
+
+    $('.ui.accordion')
+      .accordion();
   </script>
 
   <div id="target-content">
     <a href="#" class="close"></a>
     <div id="target-inner">
-      <iframe id="tock" src="https://auzpg93rj4.eu-west-2.awsapprunner.com/cases?caseNumber=<%= caseData.caseNumber %>&workItemNumber=1-ABC123&crn=121234567890">
+      <iframe id="tock"
+        src="https://auzpg93rj4.eu-west-2.awsapprunner.com/cases?caseNumber=<%= caseData.caseNumber %>&workItemNumber=1-ABC123&crn=121234567890">
         This modal is open because its id is the target in the <code>href</code> of the link. You can style an element's
         target state with the selector <code>:target</code>. When this modal is toggled, an invisible link with
         <code>href="#"</code> is positioned absolutely behind the modal content. Clicking it will change the target and
