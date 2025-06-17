@@ -2,51 +2,51 @@
   {
     "eventNumber": "1-RTNHZWO",
     "type": "Letter - Outbound",
-    "description": "Issue maitenance calculator decision letter",
+    "description": "Issue decision letter",
     "caseNumber": "1-1873302494",
     "workItemNumber": "1-60571842894",
     "status": "In Progress",
     "contactName": "John Doe",
-    "created": "2017-11-14T06:52:58.000Z"
+    "created": "2025-06-01T14:23:00.000Z"
   },
   {
-    "eventNumber": "1-RTNHZWO",
-    "type": "Letter - Outbound",
-    "description": "Issue maitenance calculator decision letter",
-    "caseNumber": "1-1873302494",
-    "workItemNumber": "1-60571842894",
-    "status": "In Progress",
-    "contactName": "John Doe",
-    "created": "2017-11-14T06:52:58.000Z"
+    "eventNumber": "1-RTR5EN5",
+    "type": "Letter - Inbound",
+    "description": "NA",
+    "caseNumber": "1-46833680810",
+    "workItemNumber": "1-46783649265",
+    "status": "Done",
+    "contactName": "Alan Wilkins",
+    "created": "2025-06-10T13:09:00.000Z"
   },
   {
-    "eventNumber": "1-RTNHZWO",
-    "type": "Letter - Outbound",
-    "description": "Issue maitenance calculator decision letter",
-    "caseNumber": "1-1873302494",
-    "workItemNumber": "1-60571842894",
-    "status": "In Progress",
-    "contactName": "John Doe",
-    "created": "2017-11-14T06:52:58.000Z"
+    "eventNumber": "1-JN9XO2OR",
+    "type": "Email - Inbound",
+    "description": "Requesting change in payment method",
+    "caseNumber": "1-2448789587",
+    "workItemNumber": "1-43130335422",
+    "status": "Done",
+    "contactName": "Barrie Bilbrey",
+    "created": "2025-06-14T06:52:58.000Z"
   },
   {
-    "eventNumber": "1-RTNHZWO",
-    "type": "Letter - Outbound",
-    "description": "Issue maitenance calculator decision letter",
-    "caseNumber": "1-1873302494",
-    "workItemNumber": "1-60571842894",
-    "status": "In Progress",
-    "contactName": "John Doe",
-    "created": "2017-11-14T06:52:58.000Z"
+    "eventNumber": "1-L3SC2E7",
+    "type": "Message - Outbound",
+    "description": "Evidence upload",
+    "caseNumber": "1-1924332847",
+    "workItemNumber": "1-47150976733",
+    "status": "Done",
+    "contactName": "Paul Daniels",
+    "created": "2025-06-11T16:30:00.000Z"
   },
   {
-    "eventNumber": "1-RTNHZWO",
-    "type": "Letter - Outbound",
-    "description": "Issue maitenance calculator decision letter",
-    "caseNumber": "1-1873302494",
-    "workItemNumber": "1-60571842894",
-    "status": "In Progress",
-    "contactName": "John Doe",
-    "created": "2017-11-14T06:52:58.000Z"
+    "eventNumber": "1-1FA32O8",
+    "type": "Message - Outbound",
+    "description": "Confirm contact details",
+    "caseNumber": "1-2458397103",
+    "workItemNumber": "1-43220472269",
+    "status": "Done",
+    "contactName": "Jones Emma",
+    "created": "2025-06-18T12:45:00.000Z"
   }
 ]

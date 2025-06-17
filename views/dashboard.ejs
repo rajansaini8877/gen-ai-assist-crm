@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Fixed Menu Example - Semantic</title>
+  <title>AI Agent Assist Demo</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
   <script src="semantic/dist/semantic.min.js"></script>
@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-    
+
     <h2 class="ui header">
       <i class="align left icon"></i>
       <div class="content">
@@ -101,7 +101,7 @@
     </h2>
 
 
-    
+
     <br>
 
 
@@ -137,7 +137,7 @@
                     <%= item.stage %>
                   </td>
                   <td>
-                    <%= new Date(item.opened) %>
+                    <%= new Date(item.opened).toUTCString() %>
                   </td>
                 </tr>
                 <% } %>
@@ -146,7 +146,7 @@
               <tr>
                 <th colspan="4">
                   <div class="ui right floated small primary labeled icon button">
-                    <i class="user icon"></i> Add Case
+                    <i class="plus icon"></i> Add Case
                   </div>
                   <div class="ui small button">
                     Show All
@@ -214,7 +214,7 @@
                     <%= item.caseNumber %>
                   </td>
                   <td>
-                    <%= new Date(item.created) %>
+                    <%= new Date(item.created).toUTCString() %>
                   </td>
                 </tr>
                 <% } %>
@@ -223,7 +223,7 @@
               <tr>
                 <th colspan="7">
                   <div class="ui right floated small primary labeled icon button">
-                    <i class="user icon"></i> Create Work Item
+                    <i class="plus icon"></i> Create Work Item
                   </div>
                   <div class="ui small button">
                     Show All
@@ -294,7 +294,7 @@
                     <%= item.contactName %>
                   </td>
                   <td>
-                    <%= new Date(item.created) %>
+                    <%= new Date(item.created).toUTCString() %>
                   </td>
                 </tr>
                 <% } %>
@@ -303,7 +303,7 @@
               <tr>
                 <th colspan="8">
                   <div class="ui right floated small primary labeled icon button">
-                    <i class="user icon"></i> Create Event
+                    <i class="plus icon"></i> Create Event
                   </div>
                   <div class="ui small button">
                     Show All

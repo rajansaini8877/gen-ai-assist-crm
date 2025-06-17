@@ -6,42 +6,42 @@
     "area": "Change employment",
     "subArea": "Change income",
     "caseNumber": "1-1873302494",
-    "created": "2017-11-14T06:52:58.000Z"
+    "created": "2025-06-10T13:09:00.000Z"
   },
   {
-    "workItemNumber": "1-60617059058",
+    "workItemNumber": "1-46783649265",
+    "status": "In Progress",
+    "process": "Perform calculation",
+    "area": "Case maintenance",
+    "subArea": "Annual review",
+    "caseNumber": "1-46833680810",
+    "created": "2025-06-14T06:52:58.000Z"
+  },
+  {
+    "workItemNumber": "1-43130335422",
+    "status": "In Progress",
+    "process": "Perform calculation",
+    "area": "Case maintenance",
+    "subArea": "Annual review",
+    "caseNumber": "1-2448789587",
+    "created": "2025-06-11T16:30:00.000Z"
+  },
+  {
+    "workItemNumber": "1-47150976733",
     "status": "In Progress",
     "process": "CofC",
     "area": "Change employment",
     "subArea": "Change income",
-    "caseNumber": "1-1873302494",
-    "created": "2017-11-14T06:52:58.000Z"
+    "caseNumber": "1-1924332847",
+    "created": "2025-06-18T12:45:00.000Z"
   },
   {
-    "workItemNumber": "1-60617059058",
+    "workItemNumber": "1-43220472269",
     "status": "In Progress",
     "process": "CofC",
     "area": "Change employment",
     "subArea": "Change income",
-    "caseNumber": "1-1873302494",
-    "created": "2017-11-14T06:52:58.000Z"
-  },
-  {
-    "workItemNumber": "1-60617059058",
-    "status": "In Progress",
-    "process": "CofC",
-    "area": "Change employment",
-    "subArea": "Change income",
-    "caseNumber": "1-1873302494",
-    "created": "2017-11-14T06:52:58.000Z"
-  },
-  {
-    "workItemNumber": "1-60617059058",
-    "status": "In Progress",
-    "process": "CofC",
-    "area": "Change employment",
-    "subArea": "Change income",
-    "caseNumber": "1-1873302494",
-    "created": "2017-11-14T06:52:58.000Z"
+    "caseNumber": "1-2458397103",
+    "created": "2025-06-01T14:23:00.000Z"
   }
 ]
